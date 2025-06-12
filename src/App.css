@@ -1,0 +1,250 @@
+#root {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* 全局样式 */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f7f8fc;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+/* 聊天应用容器 */
+.chat-app {
+  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+  background-color: #f7f8fc;
+  max-width: 480px;
+  margin: 0 auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+/* 适配底部安全区域 */
+@supports (padding-bottom: env(safe-area-inset-bottom)) {
+  .pb-safe {
+    padding-bottom: calc(0.5rem + env(safe-area-inset-bottom));
+  }
+}
+
+/* 自定义动画 */
+@keyframes pulse {
+  0% {
+    transform: scale(0.95);
+    opacity: 0.7;
+  }
+
+  50% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(0.95);
+    opacity: 0.7;
+  }
+}
+
+.pulse-animation {
+  animation: pulse 1.5s infinite ease-in-out;
+}
+
+/* 滚动条样式 */
+::-webkit-scrollbar {
+  width: 3px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+/* 自定义输入框样式 */
+.adm-input {
+  --font-size: 14px;
+  padding: 8px 12px;
+  border-radius: 20px;
+  background-color: #f0f2f5;
+}
+
+/* 自定义按钮样式 */
+.adm-button-shape-circle {
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  transition: all 0.2s;
+}
+
+.adm-button-shape-circle:active {
+  transform: scale(0.9);
+}
+
+/* 消息气泡渐变背景 */
+.bg-message-mine {
+  background: linear-gradient(135deg, #0a7cff 0%, #1e88e5 100%);
+  border-radius: 18px 4px 18px 18px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  padding: 0 10px;
+}
+
+.bg-message-other {
+  background: #ffffff;
+  border-radius: 4px 18px 18px 18px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  padding: 0 10px;
+}
+
+/* 移动端长按菜单样式 */
+.message-action-menu {
+  position: absolute;
+  bottom: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 8px;
+  padding: 6px 0;
+  display: flex;
+  z-index: 100;
+}
+
+.message-action-menu button {
+  color: white;
+  padding: 6px 12px;
+  font-size: 14px;
+  border: none;
+  background: transparent;
+}
+
+/* 录音动画 */
+.recording-wave {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.recording-wave::before,
+.recording-wave::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  background-color: rgba(255, 59, 48, 0.3);
+  animation: recording-wave 2s infinite;
+}
+
+.recording-wave::before {
+  animation-delay: 0s;
+}
+
+.recording-wave::after {
+  animation-delay: 1s;
+}
+
+@keyframes recording-wave {
+  0% {
+    width: 24px;
+    height: 24px;
+    opacity: 0.8;
+  }
+
+  100% {
+    width: 48px;
+    height: 48px;
+    opacity: 0;
+  }
+}
+
+/* 聊天头部样式 */
+.chat-header {
+  background: linear-gradient(90deg, #1976d2, #1e88e5);
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 5px 0;
+}
+
+.chat-header .adm-nav-bar-title {
+  color: white;
+}
+
+/* 头像样式 */
+.avatar {
+  width: 36px !important;
+  height: 36px !important;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 1px solid #eaeaea;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  flex-shrink: 0;
+}
+
+/* 日期分割线样式 */
+.date-divider {
+  background-color: rgba(0, 0, 0, 0.05);
+  color: #666;
+  font-size: 12px;
+  padding: 4px 12px;
+  border-radius: 12px;
+}
+
+/* 输入框区域样式 */
+.input-area {
+  background-color: #ffffff;
+  border-top: 1px solid #eaeaea;
+  padding: 8px 12px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+/* 输入框工具栏 */
+.input-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 0;
+}
+
+.input-toolbar-button {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: #f5f5f5;
+  color: #666;
+  transition: all 0.2s;
+}
+
+.input-toolbar-button:active {
+  background-color: #e0e0e0;
+}
