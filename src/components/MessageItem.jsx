@@ -100,6 +100,9 @@ const MessageItem = ({ message, isMine }) => {
                     {type === 'voice' ? (
                         <div
                             className="flex items-center gap-2 min-w-[120px] py-3 px-3"
+                            style={{
+                                height: '40px'
+                            }}
                             onClick={togglePlay}
                         >
                             <motion.div
@@ -114,7 +117,7 @@ const MessageItem = ({ message, isMine }) => {
                                     <SoundOutline className="text-lg" />
                                 )}
                             </motion.div>
-                            <div className="flex-1 h-2 bg-gray-200 rounded-full overflow-hidden">
+                            <div className="flex-1 h-10 bg-gray-200 rounded-full overflow-hidden">
                                 <motion.div
                                     className={`h-full ${isMine ? 'bg-white' : 'bg-blue-500'}`}
                                     style={{ width: `${playProgress}%` }}
