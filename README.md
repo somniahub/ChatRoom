@@ -10,7 +10,6 @@
 - emoji-mart (表情选择器)
 - react-infinite-scroll-component (无限滚动)
 - postcss-px-to-viewport (移动端适配)
-- lib-flexible (移动端适配)
 
 ## 项目结构
 
