@@ -34,6 +34,6 @@ src/
 - 使用 Zustand 进行简洁的状态管理
 - 使用 Framer Motion 实现流畅的动画效果
 - 使用 Tailwind CSS 进行快速样式开发
-- 使用 postcss-px-to-viewport 和 lib-flexible 实现移动端适配
+- 使用 postcss-px-to-viewport 实现移动端适配
 - 组件化设计，便于维护和扩展
 
