@@ -169,7 +169,7 @@ const MessageInput = () => {
                                 data={data}
                                 onEmojiSelect={handleEmojiSelect}
                                 theme="light"
-                                set="apple"
+                                set="windows"
                                 locale="zh"
                                 previewPosition="none"
                                 skinTonePosition="none"

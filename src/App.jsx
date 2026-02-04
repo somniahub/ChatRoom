@@ -1,7 +1,5 @@
 import { useEffect } from 'react'
-import ChatHeader from './components/ChatHeader'
-import MessageList from './components/MessageList'
-import MessageInput from './components/MessageInput'
+import AnchorScroll from './test/test.tsx'
 import './App.css'
 
 function App() {
@@ -22,9 +20,11 @@ function App() {
 
   return (
     <div className="chat-app">
-      <ChatHeader title="刘德华" />
-      <MessageList />
-      <MessageInput />
+      {/* <ChatHeader title="刘德华" /> */}
+      {/* <MessageList /> */}
+      {/* <UserComponent/> */}
+      <AnchorScroll/>
+      {/* <MessageInput /> */}
     </div>
   )
 }

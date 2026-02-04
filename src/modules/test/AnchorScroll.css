@@ -1,0 +1,66 @@
+.anchor-scroll-container {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+  }
+  
+  /* 锚点导航样式 */
+  .anchor-nav {
+    position: sticky;
+    top: 20px;
+    flex: 0 0 200px;
+    height: fit-content;
+    padding: 10px;
+    border-right: 1px solid #eee;
+  }
+  
+  .anchor-nav-item {
+    display: block;
+    width: 100%;
+    padding: 12px 16px;
+    margin-bottom: 8px;
+    text-align: left;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+  }
+  
+  .anchor-nav-item:hover {
+    background-color: #f5f5f5;
+  }
+  
+  .anchor-nav-item.active {
+    font-weight: 600;
+    background-color: rgba(24, 144, 255, 0.1);
+  }
+  
+  /* 内容区域样式 */
+  .anchor-content-wrapper {
+    flex: 1;
+    padding: 0 30px;
+  }
+  
+  .anchor-content-item {
+    height: 800px; /* 设置高度，方便演示滚动效果 */
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    background-color: #fff;
+  }
+  
+  .anchor-content-item h2 {
+    margin-top: 0;
+    color: #333;
+  }
+  
+  .anchor-content-item p {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #666;
+  }

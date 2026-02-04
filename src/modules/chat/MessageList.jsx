@@ -6,7 +6,6 @@ import useChatStore from '../store/chatStore';
 
 const MessageList = () => {
     const { messages, loading, hasMore, loadMoreMessages } = useChatStore();
-    const scrollRef = useRef(null);
     const messagesEndRef = useRef(null);
 
     // 新消息到达时滚动到底部
