@@ -11,10 +11,7 @@
   },
   "dependencies": {
     "@ant-design/icons-react-native": "^2.3.2",
-    "@emoji-mart/data": "^1.2.1",
-    "@emoji-mart/react": "^1.1.1",
-    "antd-mobile": "^5.39.0",
-    "antd-mobile-icons": "^0.3.0",
+    "axios": "^1.13.4",
     "framer-motion": "^12.17.2",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
@@ -24,16 +21,19 @@
   "devDependencies": {
     "@eslint/js": "^9.25.0",
     "@tailwindcss/postcss": "^4.1.10",
-    "@types/react": "^19.1.0",
-    "@types/react-dom": "^19.1.0",
+    "@types/react": "^19.1.1",
+    "@types/react-dom": "^19.1.1",
     "@vitejs/plugin-react": "^4.4.1",
     "autoprefixer": "^10.4.21",
     "eslint": "^9.25.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.5",
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.19",
     "globals": "^16.0.0",
     "postcss": "^8.5.5",
     "postcss-px-to-viewport": "^1.1.1",
+    "prettier": "^3.8.1",
     "tailwindcss": "^4.1.10",
     "vite": "^6.3.5"
   }

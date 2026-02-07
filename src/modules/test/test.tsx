@@ -1,7 +1,7 @@
 import React from 'react';
-import AnchorScroll from './AnchorScroll';
+import { axiosGet } from '../../http/request';
 
-const App: React.FC = () => {
+const test: React.FC = () => {
   // 定义锚点配置数组
   const anchorConfig = [
     { id: 'section1', label: '首页介绍' },
@@ -11,18 +11,24 @@ const App: React.FC = () => {
     { id: 'section5', label: '联系我们' },
   ];
 
+  function handleRequest() {
+    const account = 1;
+    const password = 2;
+
+    // 拼接 URL
+    const url = `/users/${account}/${password}`;
+
+    console.log(111);
+    axiosGet(url, {
+      val: '123',
+    });
+  }
+
   return (
-    <div className="app">
-      <h1>React 锚点滚动组件演示</h1>
-      {/* 使用锚点组件，传入滚动效果和配置数组 */}
-      <AnchorScroll
-        anchorList={anchorConfig}
-        scrollBehavior="smooth" // 可选：'instant' 立即滚动 / 'smooth' 平滑滚动
-        activeColor="#1890ff"
-        offsetTop={0}
-      />
+    <div style={{ width: '100%', height: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+      <button onClick={handleRequest}>点击</button>
     </div>
   );
 };
 
-export default App;
+export default test;

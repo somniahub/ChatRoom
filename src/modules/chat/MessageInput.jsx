@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from 'react';
 import { Button, Input, Toast } from 'antd-mobile';
 import { SmileOutline, SoundOutline, CloseOutline } from 'antd-mobile-icons';
-import { AnimatePresence, motion } from 'framer-motion';
+import { AnimatePresence } from 'framer-motion';
 import data from '@emoji-mart/data';
 import Picker from '@emoji-mart/react';
 import useChatStore from '../store/chatStore';

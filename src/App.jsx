@@ -1,5 +1,5 @@
 import { useEffect } from 'react'
-import AnchorScroll from './test/test.tsx'
+import Test from './modules/test/test'
 import './App.css'
 
 function App() {
@@ -20,10 +20,11 @@ function App() {
 
   return (
     <div className="chat-app">
+      <Test />
+
       {/* <ChatHeader title="刘德华" /> */}
       {/* <MessageList /> */}
       {/* <UserComponent/> */}
-      <AnchorScroll/>
       {/* <MessageInput /> */}
     </div>
   )
